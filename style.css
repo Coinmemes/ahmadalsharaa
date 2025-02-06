@@ -1,0 +1,141 @@
+/* Reset basic styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffeb3b;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #d32f2f;
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+    border-bottom: 5px solid #e57373;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #d32f2f;
+    text-align: center;
+    font-weight: 600;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.coin-logo {
+    max-width: 300px;
+    margin: 30px auto;
+    display: block;
+}
+
+.historical-image {
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+.about, .history, .historical-event {
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.about:hover, .history:hover, .historical-event:hover {
+    transform: scale(1.05);
+}
+
+.cta {
+    background-color: #ff5722;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.cta:hover {
+    background-color: #d32f2f;
+}
+
+.btn {
+    background-color: #fff;
+    color: #ff5722;
+    padding: 20px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.5em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #ff5722;
+    color: #fff;
+}
+
+footer {
+    background-color: #d32f2f;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    border-radius: 5px;
+}
