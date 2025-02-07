@@ -154,3 +154,20 @@ footer {
     margin-top: 30px;
     border-radius: 5px;
 }
+
+.lang-switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 8px 12px;
+    background-color: #f4b400;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.lang-switch:hover {
+    background-color: #e69500;
+}
+
