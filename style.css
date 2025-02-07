@@ -171,3 +171,19 @@ footer {
     background-color: #e69500;
 }
 
+/* Center images */
+.historical-image, .coin-logo {
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Increase side margins on larger screens */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+}
+
+
