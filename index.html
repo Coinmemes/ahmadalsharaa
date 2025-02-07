@@ -24,6 +24,21 @@
             <p class="subtitle">The First Original Commemorative Meme Coin</p>
             <a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" class="btn">pump.fun</a>
         </div>
+        <div class="contract-container">
+    <label>Contract Address:</label>
+    <div id="contract-text">9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump</div>
+    <button onclick="copyDivToClipboard()">Copy</button>
+</div>
+
+<script>
+function copyDivToClipboard() {
+    var text = document.getElementById("contract-text").innerText;
+    navigator.clipboard.writeText(text).then(function() {
+        alert("Contract Address copied!");
+    });
+}
+</script>
+
     </header>
 
     <section class="about">
