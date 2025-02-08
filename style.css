@@ -228,15 +228,6 @@ footer {
 }
 
 
-button {
-    cursor: pointer;
-    padding: 5px 10px;
-    background: #28a745;
-    color: white;
-    border: none;
-    border-radius: 3px;
-}
-
 
 /* Increase side margins on larger screens */
 @media (min-width: 1024px) {
