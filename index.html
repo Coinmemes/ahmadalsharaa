@@ -24,26 +24,17 @@
             <p class="subtitle">The First Original Commemorative Meme Coin</p>
             <a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" class="btn">pump.fun</a>
         </div>
-<div class="contract-container">
-    <label>Contract Address ON Solana:</label>
-    <div id="contract-text" class="contract-address">9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump</div>
-    <button onclick="copyDivToClipboard()">Copy</button>
-    <div id="copy-alert" class="copy-alert">Contract Address copied!</div>
+<div class="contract-address">
+    <div class="container">
+        <h2>Contract Address</h2>
+        <p>CA on Solana:</p>
+        <div class="ca-box">
+            <span id="contractAddress">9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump</span>
+            <button class="copy-btn" onclick="copyCA()">Copy</button>
+        </div>
+        <div id="copyAlert" class="copy-alert">Copied to clipboard!</div>
+    </div>
 </div>
-
-<script>
-function copyDivToClipboard() {
-    var text = document.getElementById("contract-text").innerText;
-    navigator.clipboard.writeText(text).then(function() {
-        var alertBox = document.getElementById("copy-alert");
-        alertBox.style.display = "block"; // Show alert
-        setTimeout(function() {
-            alertBox.style.display = "none"; // Hide alert after 2 seconds
-        }, 2000);
-    });
-}
-</script>
-
 
     </header>
 
