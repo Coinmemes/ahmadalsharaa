@@ -178,29 +178,55 @@ footer {
     max-width: 80%;
 }
 
-.contract-container {
+.contract-address {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.ca-box {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    background: #f4f4f4;
+    background: #fff;
     padding: 10px;
+    border: 1px solid #ddd;
     border-radius: 5px;
-    overflow: auto;
-    max-width: 100%;
+    max-width: 600px;
+    margin: 10px auto;
+    overflow-x: auto;
+}
+
+#contractAddress {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
     white-space: nowrap;
 }
 
-#contract-text {
-    font-family: monospace;
-    font-size: 14px;
-    padding: 5px;
-    background: #fff;
+.copy-btn {
+    margin-left: 10px;
+    padding: 8px 15px;
+    border: none;
+    background: #007bff;
+    color: white;
+    cursor: pointer;
     border-radius: 3px;
-    overflow-wrap: break-word;
-    max-width: 100%;
-    color:#000;
+    transition: 0.3s;
 }
+
+.copy-btn:hover {
+    background: #0056b3;
+}
+
+.copy-alert {
+    display: none;
+    background: #28a745;
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
 
 button {
     cursor: pointer;
