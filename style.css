@@ -78,7 +78,7 @@ img {
     margin-top: 20px;
 }
 
-.about, .history, .historical-event {
+.details, .about, .history, .historical-event {
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
@@ -87,7 +87,7 @@ img {
     transition: all 0.3s ease-in-out;
 }
 
-.about:hover, .history:hover, .historical-event:hover {
+.details:hover .about:hover, .history:hover, .historical-event:hover {
     transform: scale(1.05);
 }
 
