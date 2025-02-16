@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تحويل الصورة إلى ألوان علم الثورة السورية</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        canvas {
+            margin-top: 10px;
+            border: 1px solid #000;
+        }
+        .controls {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>رفع الصورة وتحويلها</h1>
+    <input type="file" id="upload" accept="image/*">
+    <br><br>
+    <button onclick="applyFlagOverlay()">تحويل الصورة</button>
+    <button onclick="resetImage()">مسح الصورة</button>
+    <br><br>
+    <label for="opacity">درجة الشفافية:</label>
+    <input type="range" id="opacity" min="0" max="255" value="128" onchange="applyFlagOverlay()">
+    <br>
+    <label for="starSize">حجم النجوم:</label>
+    <input type="range" id="starSize" min="10" max="100" value="30" onchange="applyFlagOverlay()">
+    <br>
+    <canvas id="canvas"></canvas>
+    <br>
+    <button onclick="downloadImage()">تحميل الصورة المعدلة</button>
+
+    <script>
+        const upload = document.getElementById('upload');
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        let img = new Image();
+        let originalImage = null;
+
+        upload.addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    img = new Image();
+                    img.onload = function() {
+                        canvas.width = img.width;
+                        canvas.height = img.height;
+                        ctx.drawImage(img, 0, 0);
+                        originalImage = ctx.getImageData(0, 0, img.width, img.height);
+                    }
+                    img.src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+
+        function applyFlagOverlay() {
+            if (!originalImage) return;
+            ctx.putImageData(originalImage, 0, 0);
+            const width = canvas.width;
+            const height = canvas.height;
+            const opacity = document.getElementById('opacity').value;
+            const starSize = document.getElementById('starSize').value;
+
+            ctx.globalAlpha = opacity / 255;
+
+            // الجزء العلوي بالأخضر
+            ctx.fillStyle = 'rgba(0, 128, 0, 1)';
+            ctx.fillRect(0, 0, width, height / 3);
+
+            // الوسط بالأبيض
+            ctx.fillStyle = 'rgba(255, 255, 255, 1)';
+            ctx.fillRect(0, height / 3, width, height / 3);
+
+            // الجزء السفلي بالأسود
+            ctx.fillStyle = 'rgba(0, 0, 0, 1)';
+            ctx.fillRect(0, 2 * height / 3, width, height / 3);
+
+            // إضافة النجوم الحمراء
+            ctx.fillStyle = 'red';
+            drawStar(width / 4, height / 2, 5, starSize, starSize / 2);
+            drawStar(width / 2, height / 2, 5, starSize, starSize / 2);
+            drawStar(3 * width / 4, height / 2, 5, starSize, starSize / 2);
+
+            ctx.globalAlpha = 1; // إعادة التعتيم الافتراضي
+            addQRCode("https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump"); // إضافة كود QR بالرابط المحدد
+        }
+
+        function drawStar(x, y, points, outerRadius, innerRadius) {
+            const angle = Math.PI / points;
+            ctx.beginPath();
+            for (let i = 0; i < 2 * points; i++) {
+                const r = i % 2 === 0 ? outerRadius : innerRadius;
+                const a = i * angle - Math.PI / 2;
+                ctx.lineTo(x + r * Math.cos(a), y + r * Math.sin(a));
+            }
+            ctx.closePath();
+            ctx.fill();
+        }
+
+        function addQRCode(text) {
+            const qr = qrcode(4, 'L');
+            qr.addData(text);
+            qr.make();
+            const qrCanvas = document.createElement('canvas');
+            const qrCtx = qrCanvas.getContext('2d');
+            qrCanvas.width = 100;
+            qrCanvas.height = 100;
+            qrCtx.fillStyle = "white";
+            qrCtx.fillRect(0, 0, 100, 100);
+            const qrImg = new Image();
+            qrImg.src = qr.createDataURL();
+            qrImg.onload = function() {
+                ctx.drawImage(qrImg, canvas.width - 110, canvas.height - 110, 100, 100);
+            }
+        }
+
+        function resetImage() {
+            if (originalImage) {
+                ctx.putImageData(originalImage, 0, 0);
+            }
+        }
+
+        function downloadImage() {
+            const link = document.createElement('a');
+            link.download = 'converted_image.png';
+            link.href = canvas.toDataURL();
+            link.click();
+        }
+    </script>
+</body>
+</html>
