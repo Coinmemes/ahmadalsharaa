@@ -125,7 +125,7 @@ function resetImage() {
 function downloadImage() {
     const canvas = document.getElementById('imageCanvas');
     const link = document.createElement('a');
-    link.download = 'converted_image.png';
+    link.download = 'tinyurl.com/2ft5aap6.png';
     link.href = canvas.toDataURL();
     link.click();
 }
