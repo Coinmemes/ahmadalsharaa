@@ -228,7 +228,19 @@ footer {
     border-radius: 5px;
 }
 
-
+.image-converter {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .image-converter canvas {
+            margin-top: 10px;
+            border: 1px solid #000;
+            max-width: 100%;
+            height: auto;
+        }
+        .image-converter .controls {
+            margin-top: 10px;
+        }
 
 /* Increase side margins on larger screens */
 @media (min-width: 1024px) {
