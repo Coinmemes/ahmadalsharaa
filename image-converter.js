@@ -21,15 +21,15 @@ function handleImageUpload(event) {
                 // Calculate aspect ratio
                 const aspectRatio = width / height;
 
-                // Adjust width and height to fit within maxWidth and maxHeight while maintaining aspect ratio
-                if (width > maxWidth) {
-                    width = maxWidth;
-                    height = width / aspectRatio;
-                }
-
-                if (height > maxHeight) {
-                    height = maxHeight;
-                    width = height * aspectRatio;
+                // Determine new dimensions based on the limiting dimension
+                if (width > maxWidth || height > maxHeight) {
+                    if (width / maxWidth > height / maxHeight) {
+                        width = maxWidth;
+                        height = width / aspectRatio;
+                    } else {
+                        height = maxHeight;
+                        width = height * aspectRatio;
+                    }
                 }
 
                 canvas.width = width;
