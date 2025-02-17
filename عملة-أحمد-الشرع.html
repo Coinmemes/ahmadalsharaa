@@ -9,7 +9,7 @@
     <meta name="author" content="مجتمع أحمد الشرع">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator/qrcode.js"></script>
  <script>
    function copyCA() {
     const caText = document.getElementById("contractAddress").innerText;
@@ -22,6 +22,7 @@
     });
 }
  </script>
+    <script src="image-converter.js"></script>
 <body>
 
     <header>
@@ -68,6 +69,28 @@
             <img src="historical-event.jpg" alt="حدث تاريخي - أحمد الشرع" class="historical-image">
         </div>
     </section>
+        <section class="image-converter">
+        <div class="container">
+            <h2>حول صورتك لألوان علم الثورة السوريا</h2>
+            <input type="file" id="upload" accept="image/*" onchange="handleImageUpload(event)">
+            <br><br>
+            <button onclick="applyFlagOverlay()">انقر للتحويل</button>
+            <button onclick="resetImage()">Reset Image</button>
+            <br><br>
+            <label for="opacity">درجة الشفافية:</label>
+            <input type="range" id="opacity" min="0" max="255" value="128" onchange="applyFlagOverlay()">
+            <br>
+            <label for="starSize">حجم النجوم :</label>
+            <input type="range" id="starSize" min="10" max="100" value="30" onchange="applyFlagOverlay()">
+            <br>
+            <label for="addQrCode">Add QR Code:</label>
+            <input type="checkbox" id="addQrCode" onchange="applyFlagOverlay()" checked>
+            <br>
+            <canvas id="imageCanvas"></canvas>
+            <br>
+            <button onclick="downloadImage()">تنزيل الصورة</button>
+        </div>
+        </section>
 
     <section class="cta">
         <div class="container">
