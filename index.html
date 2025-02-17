@@ -25,6 +25,51 @@
         }, 2000);
     });
 }
+        function applySyrianFlagFilter() {
+            const fileInput = document.getElementById("imageUpload");
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+            const reader = new FileReader();
+            
+            reader.onload = function(event) {
+                const img = new Image();
+                img.onload = function() {
+                    canvas.width = img.width;
+                    canvas.height = img.height;
+                    ctx.drawImage(img, 0, 0);
+                    
+                    let imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    let data = imageData.data;
+                    
+                    for (let i = 0; i < data.length; i += 4) {
+                        let red = data[i];
+                        let green = data[i + 1];
+                        let blue = data[i + 2];
+                        
+                        if (red > green && red > blue) {
+                            data[i] = 206; data[i + 1] = 17; data[i + 2] = 38; // Red stripe
+                        } else if (green > red && green > blue) {
+                            data[i] = 255; data[i + 1] = 255; data[i + 2] = 255; // White stripe
+                        } else {
+                            data[i] = 0; data[i + 1] = 122; data[i + 2] = 61; // Green stripe
+                        }
+                    }
+                    
+                    ctx.putImageData(imageData, 0, 0);
+                    
+                    if (document.getElementById("addQR").checked) {
+                        let qr = new Image();
+                        qr.src = "qr-code.png";
+                        qr.onload = function() {
+                            let qrSize = canvas.width * 0.2;
+                            ctx.drawImage(qr, canvas.width - qrSize - 10, canvas.height - qrSize - 10, qrSize, qrSize);
+                        };
+                    }
+                };
+                img.src = event.target.result;
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
         
 </script>
 
