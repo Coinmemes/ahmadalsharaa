@@ -18,13 +18,18 @@ function handleImageUpload(event) {
                 let width = img.width;
                 let height = img.height;
 
+                // Calculate aspect ratio
+                const aspectRatio = width / height;
+
+                // Adjust width and height to fit within maxWidth and maxHeight while maintaining aspect ratio
                 if (width > maxWidth) {
-                    height *= maxWidth / width;
                     width = maxWidth;
+                    height = width / aspectRatio;
                 }
+
                 if (height > maxHeight) {
-                    width *= maxHeight / height;
-                    height = maxWidth;
+                    height = maxHeight;
+                    width = height * aspectRatio;
                 }
 
                 canvas.width = width;
