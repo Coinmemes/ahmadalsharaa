@@ -125,7 +125,7 @@ function resetImage() {
 function downloadImage() {
     const canvas = document.getElementById('imageCanvas');
     const link = document.createElement('a');
-    link.download = 'tinyurl.com/2ft5aap6.png';
+    link.download = 'ca_on_Solana_9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump.png';
     link.href = canvas.toDataURL();
     link.click();
 }
