@@ -228,6 +228,18 @@ footer {
     border-radius: 5px;
 }
 
+.img-converter-link {
+  color: DodgerBlue;
+  text-decoration: none;
+  margin: 10px 20px;
+  display: inline-block;
+}
+
+.img-converter-link:hover {
+  color: white;
+}
+
+
 .image-converter {
             text-align: center;
             margin-top: 20px;
