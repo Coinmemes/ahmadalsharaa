@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>طريقة شراء عملة أحمد الشرع | دليل شامل للمبتدئين</title>
+    <meta name="description" content="تعلم كيف تشتري عملة أحمد الشرع على شبكة سولانا من موقع Pump.fun باستخدام محفظة فانتوم. شرح خطوة بخطوة للمبتدئين مع روابط مباشرة ونصائح مهمة.">
+    <meta name="keywords" content="عملة أحمد الشرع, شراء عملة أحمد الشرع, Pump.fun, فانتوم, سولانا, CA, كريبتو سوريا, Ahmad Alsharaa Coin, crypto Syria">
+    <meta name="author" content="مجتمع أحمد الشرع">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <a href="index.html" class="lang-switch">English</a>
+    <div class="container">
+        <h1><strong>عملة أحمد الشرع</strong></h1>
+        <p class="subtitle">أول عملة ميم تذكارية أصلية</p>
+        <a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" class="btn" target="_blank">شراء العملة من Pump.fun</a>
+    </div>
+    <div class="contract-address">
+        <div>
+            <h2>عنوان العقد الذكي (CA)</h2>
+            <p>نسخ عنوان العقد للبحث أو الإضافة للمحفظة:</p>
+            <div class="ca-box">
+                <span id="contractAddress">9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump</span>
+            </div>
+            <button class="copy-btn" onclick="copyCA()">نسخ</button>
+            <div id="copyAlert" class="copy-alert">تم النسخ!</div>
+        </div>
+    </div>
+</header>
+
+<section class="buy-guide">
+    <div class="container">
+        <h2>شرح شراء عملة أحمد الشرع خطوة بخطوة</h2>
+
+        <h3>ملخص سريع:</h3>
+        <ol>
+            <li><strong>نزّل محفظة Phantom</strong> من <a href="https://phantom.app/" target="_blank">phantom.app</a></li>
+            <li><strong>اشترِ عملة SOL</strong> من منصة مثل <a href="https://www.binance.com/" target="_blank">Binance</a> أو <a href="https://www.okx.com/" target="_blank">OKX</a></li>
+            <li><strong>أرسل SOL لمحفظتك على Phantom</strong></li>
+            <li><strong>ادخل على <a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" target="_blank">رابط العملة الرسمي</a></strong></li>
+            <li><strong>اربط محفظتك واشتري العملة</strong></li>
+        </ol>
+
+        <h3>الشرح المفصل للمبتدئين:</h3>
+
+        <h4>1. تحميل محفظة Phantom</h4>
+        <p>ادخل إلى <a href="https://phantom.app/" target="_blank">phantom.app</a>، واضغط على "Download" لتثبيت الامتداد على متصفحك. بعد التثبيت:</p>
+        <ul>
+            <li>أنشئ محفظة جديدة</li>
+            <li>احفظ عبارة الاسترداد (12 كلمة) في مكان آمن</li>
+            <li>لا تشارك هذه العبارة مع أي شخص أبداً</li>
+        </ul>
+
+        <h4>2. شراء عملة سولانا (SOL)</h4>
+        <p>سولانا (SOL) هي العملة التي تستخدم للشراء على موقع pump.fun. يمكنك شراؤها من:</p>
+        <ul>
+            <li><a href="https://www.binance.com/" target="_blank">Binance</a></li>
+            <li><a href="https://www.okx.com/" target="_blank">OKX</a></li>
+            <li>أي منصة أخرى تدعم تحويل العملات إلى شبكة سولانا</li>
+        </ul>
+        <p>بعد الشراء، انسخ عنوان محفظتك من Phantom وأرسل إليه عملة SOL.</p>
+
+        <h4>3. فتح صفحة عملة أحمد الشرع</h4>
+        <p>ادخل مباشرة إلى:
+            <br><a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" target="_blank">https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump</a>
+        </p>
+        <p>أو يمكنك البحث باستخدام عنوان العقد الذكي (CA) عبر Google أو X (تويتر) لرؤية الأخبار والمجتمع:</p>
+        <ul>
+            <li><a href="https://x.com/search?q=9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" target="_blank">البحث في X</a></li>
+            <li><a href="https://www.google.com/search?q=9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" target="_blank">البحث في Google</a></li>
+        </ul>
+
+        <h4>4. ربط المحفظة بموقع Pump.fun</h4>
+        <p>في الزاوية العليا اضغط "Connect Wallet"، ثم اختر Phantom. وافق على الاتصال من نافذة المحفظة.</p>
+
+        <h4>5. شراء عملة أحمد الشرع</h4>
+        <p>اضغط على زر "Buy"، أدخل كمية SOL التي تريد استخدامها للشراء. ستظهر لك كمية العملة المقابلة. وافق على العملية في محفظتك.</p>
+
+        <h4>6. التحقق من رصيدك</h4>
+        <p>افتح تطبيق Phantom وسترى عملة "Ahmad Alsharaa" ضمن قائمة العملات. إذا لم تظهر مباشرة، أضفها يدويًا باستخدام CA.</p>
+
+        <h4>نصائح مهمة للمبتدئين:</h4>
+        <ul>
+            <li>احتفظ بجزء صغير من SOL للرسوم</li>
+            <li>لا تستثمر كل أموالك – السوق متقلب</li>
+            <li>تابع أخبار العملة على <a href="https://x.com/search?q=Ahmed+Alsharaa+coin" target="_blank">X</a> و TikTok</li>
+        </ul>
+    </div>
+</section>
+
+<section class="cta">
+    <div class="container">
+        <h2>كن جزءًا من الثورة الرقمية!</h2>
+        <a href="https://pump.fun/coin/9bDTN4FahNPaQLTk9p6rjjbL3Uej46CCcAwyuKxFpump" class="btn" target="_blank">شراء العملة الآن</a>
+        <p><a href="https://coinmemes.github.io/ahmadalsharaa/%D8%B9%D9%85%D9%84%D8%A9-%D8%A3%D8%AD%D9%85%D8%AF-%D8%A7%D9%84%D8%B4%D8%B1%D8%B9.html">العودة إلى الصفحة الرئيسية</a></p>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2024 عملة أحمد الشرع. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<script>
+function copyCA() {
+    const caText = document.getElementById("contractAddress").innerText;
+    navigator.clipboard.writeText(caText).then(() => {
+        const alertBox = document.getElementById("copyAlert");
+        alertBox.style.display = "block";
+        setTimeout(() => {
+            alertBox.style.display = "none";
+        }, 2000);
+    });
+}
+</script>
+
+</body>
+</html>
